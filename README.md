@@ -1,2 +1,4 @@
 # searching_algorithms_geeks4geeks
-https://www.geeksforgeeks.org/searching-algorithms/
+Try to implement some searching algorithms from [geeksforgeeks](https://www.geeksforgeeks.org/searching-algorithms/) in TDD way.
+- LinearSearch
+- BinarySearch
