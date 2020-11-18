@@ -8,3 +8,4 @@ Try to implement some searching algorithms from [geeksforgeeks](https://www.geek
 
 - LinearSearch
 - BinarySearch
+- JumpSearch
