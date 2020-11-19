@@ -16,5 +16,7 @@ public class InterpolationSearchTest {
     public void testSearch_fail() {
         int[] arr = {2,5,8,12,16,23,38,56,72,91};
         Assert.assertEquals(-1, InterpolationSearch.search(arr, 35));
+        Assert.assertEquals(-1, InterpolationSearch.search(arr, -200));
+        Assert.assertEquals(-1, InterpolationSearch.search(arr, 315));
     }
 }

@@ -13,6 +13,8 @@ public class BinarySearchTest {
     @Test
     public void testSearch_fail() {
         int[] arr = {2,5,8,12,16,23,38,56,72,91};
+        Assert.assertEquals(-1, BinarySearch.search(arr, 1));
         Assert.assertEquals(-1, BinarySearch.search(arr, 35));
+        Assert.assertEquals(-1, BinarySearch.search(arr, 455));
     }
 }

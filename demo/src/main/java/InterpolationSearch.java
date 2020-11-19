@@ -10,6 +10,12 @@ public class InterpolationSearch {
         int n = lo;
         if (arr[hi - 1] != arr[lo]) {
             n = n + (hi - 1 - lo) * (v - arr[lo]) / (arr[hi - 1] - arr[lo]);
+            if (n < 0) {
+                n = 0;
+            }
+            if (n > hi - 1) {
+                n = hi - 1;
+            }
         }
         if (v == arr[n]) {
             return n;
