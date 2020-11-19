@@ -9,7 +9,7 @@ public class InterpolationSearchTest {
         Assert.assertEquals(0, InterpolationSearch.search(arr, 2));
         Assert.assertEquals(9, InterpolationSearch.search(arr, 91));
         int[] arr2 = {2,2,2,2,2,2,2,2,2,2,2,2};
-        Assert.assertEquals(0, InterpolationSearch.search(arr, 2));
+        Assert.assertEquals(0, InterpolationSearch.search(arr2, 2));
     }
 
     @Test

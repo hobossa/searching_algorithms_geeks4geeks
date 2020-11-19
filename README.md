@@ -10,3 +10,4 @@ Java implements of searching algorithms from [geeksforgeeks](https://www.geeksfo
 - BinarySearch
 - JumpSearch
 - InterpolationSearch
+- ExponentialSearch
