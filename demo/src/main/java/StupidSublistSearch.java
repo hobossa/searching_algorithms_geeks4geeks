@@ -1,13 +1,10 @@
 public class StupidSublistSearch {
-    static class Node {
-        int data;
-        Node next;
-    }
 
 
-    // Returns true if first list is
-    // present in second list
-    static boolean findList(Node first, Node second) {
+    // Returns true if first string is present in second string
+    static boolean findList(String first, String second) {
+        int m = first.length();
+        int n = second.length();
         return false;
     }
 }
