@@ -1,7 +1,7 @@
-public class StupidSublistSearch {
+public class NaiveSublistSearch {
 
     // Returns true if first string is present in second string
-    static boolean findList(String first, String second) {
+    static int findList(String first, String second) {
         int m = first.length();
         int n = second.length();
         for (int i = 0; i < n; i++) {
@@ -12,9 +12,9 @@ public class StupidSublistSearch {
                 }
             }
             if (j == m) {
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
     }
 }

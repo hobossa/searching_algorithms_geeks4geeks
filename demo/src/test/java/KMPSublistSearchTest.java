@@ -3,18 +3,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class StupidSublistSearchTest {
+public class KMPSublistSearchTest {
     @Test
     public void testSearch_ok() {
         String first = "cde";
         String second = "abcdefg";
-        Assert.assertTrue(StupidSublistSearch.findList(first, second));
+        Assert.assertEquals(2, KMPSublistSearch.findList(first, second));
     }
 
     @Test
     public void testSearch_fail() {
         String first = "adef";
         String second = "abcdefg";
-        Assert.assertFalse(StupidSublistSearch.findList(first, second));
+        Assert.assertEquals(-1, KMPSublistSearch.findList(first, second));
     }
 }

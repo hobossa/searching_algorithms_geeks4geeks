@@ -11,5 +11,5 @@ Java implements of searching algorithms from [geeksforgeeks](https://www.geeksfo
 - JumpSearch
 - InterpolationSearch
 - ExponentialSearch
-- StupidSublistSearch
+- NaiveSublistSearch
 - KMPSublistSearch
