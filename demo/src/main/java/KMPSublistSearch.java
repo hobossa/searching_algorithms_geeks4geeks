@@ -4,6 +4,7 @@ public class KMPSublistSearch {
     }
 
     // https://blog.csdn.net/dark_cy/article/details/88698736
+    // https://blog.csdn.net/yyzsir/article/details/89462339
     static int[] computeLPSArray(String pat) {
         final int n = pat.length();
         final int[] lps = new int[n];
