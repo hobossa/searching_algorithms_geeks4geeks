@@ -4,10 +4,10 @@ public class NaiveSublistSearch {
     static int findList(String first, String second) {
         int m = first.length();
         int n = second.length();
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n - m + 1; i++) {
             int j;
             for (j = 0; j < m; j++) {
-                if (first.charAt(j) != second.charAt(i+j)) {
+                if (first.charAt(j) != second.charAt(i + j)) {
                     break;
                 }
             }
