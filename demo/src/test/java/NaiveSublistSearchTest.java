@@ -17,9 +17,4 @@ public class NaiveSublistSearchTest {
         Assert.assertEquals(-1, NaiveSublistSearch.findList(pat, text));
     }
 
-    @Test
-    public void testComputerLPS_ok(){
-        String pat = "aaaa";
-        Assert.assertArrayEquals(new int[]{0, 1, 2, 3}, KMPSublistSearch.computeLPSArray(pat));
-    }
 }
