@@ -3,15 +3,23 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.nio.channels.AsynchronousServerSocketChannel;
+import java.util.Collections;
+import java.util.Vector;
 
 import static org.junit.Assert.*;
 
 public class KMPSublistSearchTest {
     @Test
     public void testSearch_ok() {
-        String pat = "cde";
-        String text = "abcdefg";
-        Assert.assertEquals(2, KMPSublistSearch.findList(pat, text));
+        Assert.assertEquals(2, KMPSublistSearch.findList("cde", "abcdefg"));
+    }
+
+    @Test
+    public void testSearchEx_ok() {
+        Vector<Integer> re = new Vector<>();
+        re.add(0);
+        re.add(3);
+        Assert.assertEquals(re, KMPSublistSearch.findListEx("ab", "abcab"));
     }
 
     @Test

@@ -1,15 +1,61 @@
+import java.util.Vector;
+
 public class KMPSublistSearch {
     public static int findList(String pat, String text) {
-        return FindList(0, pat, text);
+        return findList(0, pat, text);
     }
 
-    public static int FindList(int start, String pat, String text) {
+    public static int findList(int start, String pat, String text) {
         int[] prefixArray = computePrefixArray(pat);
         int n = text.length();
         int m = pat.length();
-        
+        int i = start;
+        int j = 0;
+        while (i <= n - m + j) {
+            if (pat.charAt(j) == text.charAt(i)) {
+                i++;
+                j++;
+            } else {
+                if (0 == j) {
+                    i++;
+                } else {
+                    j = prefixArray[j - 1];
+                }
+            }
+            if (j == m) {
+                return i - m;
+            }
+        }
 
         return -1;
+    }
+
+    public static Vector<Integer> findListEx(String pat, String text) {
+        Vector<Integer> re = new Vector<>();
+        int[] prefixArray = computePrefixArray(pat);
+        int n = text.length();
+        int m = pat.length();
+        int i = 0;
+        int j = 0;
+        while (i <= n - m + j) {
+            if (pat.charAt(j) == text.charAt(i)) {
+                i++;
+                j++;
+            } else {
+                if (0 == j) {
+                    i++;
+                } else {
+                    j = prefixArray[j - 1];
+                }
+            }
+
+            if (j == m) {
+                re.add(i - m);
+                j = prefixArray[j - 1];
+            }
+
+        }
+        return re;
     }
 
     // https://github.com/TheAlgorithms/Java/blob/master/Others/KMP.java
