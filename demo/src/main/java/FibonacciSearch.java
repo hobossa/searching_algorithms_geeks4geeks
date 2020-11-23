@@ -10,6 +10,9 @@ public class FibonacciSearch {
             int fibMMm1 = 1;   // (m-1)'th Fibonacci No.
             int fibM = fibMMm2 + fibMMm1;  // m'th Fibonacci
 
+            // 0 ........ fibMMm2 ..... fibMMm1 ........fibM
+            // |- fibMMm2  -|-       fibMMm1               -|
+
             while (fibM < n) {
                 fibMMm2 = fibMMm1;
                 fibMMm1 = fibM;
