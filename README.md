@@ -14,3 +14,4 @@ Java implements of searching algorithms from [geeksforgeeks](https://www.geeksfo
 - NaiveSublistSearch
 - KMPSublistSearch
 - FibonacciSearch
+- UbiquitousBinarySearch
