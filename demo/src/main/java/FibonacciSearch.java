@@ -22,15 +22,15 @@ public class FibonacciSearch {
                 int i = min(offset+fibMMm2, n-1);
 
                 if (k > arr[i]) {
-                    // 1 fibonacci up
-                    fibMMm2 = fibMMm1;
-                    fibMMm1 = fibM;
-                    fibM = fibMMm2 + fibMMm1;
+                    // 1 fibonacci down
+                    fibM = fibMMm1; // the length on the right of i is fibMMm1
+                    fibMMm1 = fibMMm2;
+                    fibMMm2 = fibM - fibMMm1;
                     offset = i;
 
                 } else if (k < arr[i]) {
                     // 2 fibonacci down
-                    fibM = fibMMm2;
+                    fibM = fibMMm2; // the length on the left of i is fibMMm2
                     fibMMm1 = fibMMm1 - fibMMm2;
                     fibMMm2 = fibM - fibMMm1;
                 } else { //if (k == arr[fibMMm2]) {
