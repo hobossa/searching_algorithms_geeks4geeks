@@ -55,9 +55,45 @@ public class UbiquitousBinarySearch {
         return 0;
     }
 
+    static int getLoPosition(int[] arr, int k, int lo, int hi) {
+        int m;
+        while (hi - lo > 1) {
+            m = (lo + hi) / 2;
+
+        }
+
+        return 0;
+    }
+
+    static int getHiPosition(int[] arr, int k, int lo, int hi) {
+        int m;
+        while (hi - lo > 1) {
+            m = (lo + hi) / 2;
+
+        }
+        return 0;
+    }
+
+
     // Given a sorted array of distinct elements, and the array is rotated at an unknown position.
     // Find minimum element in the array.
-    public static int count(int[] arr) {
+    public static int indexOfMinimumRotatedArray(int[] arr) {
         return 0;
+    }
+
+    static int indexOfMinimumRotatedArray(int[] arr, int lo, int hi) {
+        if (arr[lo] <= arr[hi]) {
+            return lo;  // not rotated
+        }
+        int m;
+        while (hi - lo > 1) {
+            m = (hi + lo) / 2;
+            if (arr[lo] < arr[m]) {
+                lo = m;
+            } else {
+                hi = m + 1;
+            }
+        }
+        return -1;
     }
 }

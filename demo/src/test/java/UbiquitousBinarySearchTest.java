@@ -6,12 +6,14 @@ import static org.junit.Assert.*;
 public class UbiquitousBinarySearchTest {
     @Test
     public void testSearch_ok() {
-        int[] arr = {2,5,8,12,16,23,38,56,72,91};
+        int[] arr = {2,5,8,12,16,23,38,56,72,91,100};
         Assert.assertEquals(5, UbiquitousBinarySearch.search(arr, 23));
         Assert.assertEquals(0, UbiquitousBinarySearch.search(arr, 2));
         Assert.assertEquals(9, UbiquitousBinarySearch.search(arr, 91));
         Assert.assertEquals(4, UbiquitousBinarySearch.search(arr, 16));
+        Assert.assertEquals(10, UbiquitousBinarySearch.search(arr, 100));
     }
+
 
     @Test
     public void testSearch_fail() {
