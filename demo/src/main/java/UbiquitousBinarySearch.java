@@ -82,7 +82,7 @@ public class UbiquitousBinarySearch {
     }
 
     static int indexOfMinimumRotatedArray(int[] arr, int lo, int hi) {
-        if (arr[lo] <= arr[hi]) {
+        if (arr[lo] <= arr[hi-1]) {
             return lo;  // not rotated
         }
         int m;
