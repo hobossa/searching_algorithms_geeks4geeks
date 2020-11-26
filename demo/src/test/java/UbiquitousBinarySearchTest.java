@@ -39,32 +39,26 @@ public class UbiquitousBinarySearchTest {
 
     @Test
     public void testCount_ok() {
-        int[] arr = {1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,7,7,7,7,7,7,7,8};
+        int[] arr = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 8};
         Assert.assertEquals(0, UbiquitousBinarySearch.count(arr, 0));
         Assert.assertEquals(0, UbiquitousBinarySearch.count(arr, 9));
-//        Assert.assertEquals(1, UbiquitousBinarySearch.count(arr, 1));
+        Assert.assertEquals(1, UbiquitousBinarySearch.count(arr, 1));
         Assert.assertEquals(2, UbiquitousBinarySearch.count(arr, 2));
-//        Assert.assertEquals(3, UbiquitousBinarySearch.count(arr, 3));
-//        Assert.assertEquals(4, UbiquitousBinarySearch.count(arr, 4));
-//        Assert.assertEquals(5, UbiquitousBinarySearch.count(arr, 5));
-//        Assert.assertEquals(6, UbiquitousBinarySearch.count(arr, 6));
-//        Assert.assertEquals(7, UbiquitousBinarySearch.count(arr, 7));
+        Assert.assertEquals(3, UbiquitousBinarySearch.count(arr, 3));
+        Assert.assertEquals(4, UbiquitousBinarySearch.count(arr, 4));
+        Assert.assertEquals(5, UbiquitousBinarySearch.count(arr, 5));
+        Assert.assertEquals(6, UbiquitousBinarySearch.count(arr, 6));
+        Assert.assertEquals(7, UbiquitousBinarySearch.count(arr, 7));
     }
 
-    // implementation from geeksforgeeks
-//    @Test
-//    public void testCountOccurances_ok() {
-//        int[] arr = {1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,7,7,7,7,7,7,7,8};
-//        Assert.assertEquals(0, UbiquitousBinarySearch.CountOccurances(arr, 0));
-//        Assert.assertEquals(0, UbiquitousBinarySearch.CountOccurances(arr, 9));
-//        Assert.assertEquals(1, UbiquitousBinarySearch.CountOccurances(arr, 1));
-//        Assert.assertEquals(2, UbiquitousBinarySearch.CountOccurances(arr, 2));
-//        Assert.assertEquals(3, UbiquitousBinarySearch.CountOccurances(arr, 3));
-//        Assert.assertEquals(4, UbiquitousBinarySearch.CountOccurances(arr, 4));
-//        Assert.assertEquals(5, UbiquitousBinarySearch.CountOccurances(arr, 5));
-//        Assert.assertEquals(6, UbiquitousBinarySearch.CountOccurances(arr, 6));
-//        Assert.assertEquals(7, UbiquitousBinarySearch.CountOccurances(arr, 7));
-//    }
+    @Test
+    public void testGetLoPosition_ok() {
+        int[] arr1 = {2, 4, 6, 8};
+        //Assert.assertEquals(0, UbiquitousBinarySearch.getLoPosition(arr1, -1, 0, arr1.length));
+        //Assert.assertEquals(0, UbiquitousBinarySearch.getLoPosition(arr1, 2, 0, arr1.length));
+        Assert.assertEquals(1, UbiquitousBinarySearch.getLoPosition(arr1, 4, 0, arr1.length));
+    }
+
 
     @Test
     public void testIndexOfMinimumRotatedArray_ok() {
